@@ -5,8 +5,12 @@ import (
 	"net/http"
 )
 
+func getMessage() string {
+	return "Hello golang"
+}
+
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "HelloHandler Golang")
+	fmt.Fprint(w, getMessage())
 }
 func VersionHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Logger: Got server version request !")
